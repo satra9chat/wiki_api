@@ -1,0 +1,10 @@
+{
+    "name": "napajs-tutorial",
+    "version": "0.1.0",
+    "author": "napajs",
+    "main": "./estimate-pi-in-parallel.js",
+    "dependencies": {
+        "ajax": "0.0.4",
+        "napajs": ">= 0.1.0"
+    }
+}
