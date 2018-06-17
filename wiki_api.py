@@ -150,6 +150,9 @@ def url_builder(found, ID, query):
     for x in keys:
         category_list[x] = category_list[x][category_list[x].find(':') + 1:]
         category_dict[category_list[x]] = category_list_url[x]
+    for x in category_dict:  # handling disambiguation pages exception
+        if "Disambiguation pages" in x:
+            category_dict[x] = ""
     json_string = json.dumps(category_dict)
     print(json.dumps(json_string, indent=2, sort_keys=True))  # building json object
     return json_string
